@@ -1,11 +1,16 @@
 development: &default
-  adapter: postgresql
+  adapter: mysql2
   database: stimulusjs-demo_development
   encoding: utf8
   min_messages: warning
   pool: <%= Integer(ENV.fetch("DB_POOL", 5)) %>
   reaping_frequency: <%= Integer(ENV.fetch("DB_REAPING_FREQUENCY", 10)) %>
   timeout: 5000
+  username: <%= ENV.fetch('MYSQL_USER', 'root') %>
+  password: <%= ENV.fetch('MYSQL_PASS', '') %>
+  host: <%= ENV.fetch('MYSQL_HOST', 'localhost') %>
+  socket: <%= ENV.fetch('DB_SOCKET', '/tmp/mysql.sock') %>
+
 
 test:
   <<: *default

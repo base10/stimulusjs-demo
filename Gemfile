@@ -11,7 +11,7 @@ gem "autoprefixer-rails"
 gem "flutie"
 gem "honeybadger"
 gem "jquery-rails"
-gem "pg", "~> 0.18"
+gem "mysql2"
 gem "puma"
 gem "rack-canonical-host"
 gem "rails", "~> 5.1.4"
@@ -58,4 +58,4 @@ gem 'refills', group: [:development, :test]
 gem 'spring-commands-rspec', group: :development
 gem 'rspec-rails', '~> 3.6', group: [:development, :test]
 gem 'shoulda-matchers', group: :test
-gem 'capybara-webkit', group: :test
+#gem 'capybara-webkit', group: :test
