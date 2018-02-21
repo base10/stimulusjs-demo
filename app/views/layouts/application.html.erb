@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>StimulusjsDemo</title>
+    <title>StimulusJS Demo</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+    <section
+      data-controller="messages"
+      data-messages-url="/messages"
+      data-messages-refresh-interval="5000"
+    >
     <%= yield %>
+    </section>
   </body>
 </html>
